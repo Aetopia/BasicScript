@@ -1,4 +1,3 @@
-# Nite
 from sys import argv
 from Parser import Script
 
