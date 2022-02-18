@@ -12,8 +12,10 @@ Script files end with `.nite`.
 Say, a User inputs the following script into Nite.
 
 ```
-var Variable = Value
-echo Variable is equal to {Variable}
+var Variable = 1
+echo Variable is equal to {Variable}.
+if {Variable} == 1 | echo Statement is True.
+if {Variable} != 0 | echo Statement is False.
 echo Pausing script.
 pause 1
 echo Exiting!
@@ -25,11 +27,14 @@ The converted script looks like this:
 ```ini
 [Script]
 
-1 = var Variable = Value
-2 = echo Variable is equal to {Variable}
-3 = echo Pausing script.
-4 = pause 1
-5 = echo Exiting!
+1 = var Variable = 1
+2 = echo Variable is equal to {Variable}.
+3 = if {Variable} == 1 | echo Statement is True.
+4 = if {Variable} != 0 | echo Statement is False.
+5 = echo Pausing script.
+6 = pause 1
+7 = echo Exiting!
+
 ```
 
 1. Here, Nite adds a [Script] Section into converted script.
@@ -39,7 +44,9 @@ The converted script looks like this:
 
 And we finally get the following output:
 ```
-Variable is equal to Value
+Variable is equal to 1.
+Statement is True.
+Statement is False.
 Pausing script.
 Exiting!
 ```
@@ -49,6 +56,8 @@ Exiting!
 1. `var <Variable Name> = <Value>` => Creates a variable.
 2. `echo <String>` => Prints the specified string into the terminal.
 3. `pause <Float Value>` => Pauses a script for a specified time.
+4. `if Condition | Command` => If statement.         
+**Note: The If statement only uses eval() for logical operations.**
 
 To load in variable/s values into a command, enclose them in `{}`.        
      
