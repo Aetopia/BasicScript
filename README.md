@@ -6,6 +6,7 @@ To execute a script open up the terminal and type:
 ```cmd
 nite [Script File]
 ```
+Script files end with `.nite`.
 
 ## How does it work?
 Say, a User inputs the following script into Nite.
