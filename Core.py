@@ -12,3 +12,4 @@ def Execute(Command, Arguments):
         case 'pause': StdLib.Pause(Arguments)
         case 'var' | 'variable':
             StdLib.Variable(Arguments)
+        case 'if': StdLib.IF(Arguments)
