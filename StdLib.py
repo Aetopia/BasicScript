@@ -16,4 +16,6 @@ def Pause(Time):
         try: sleep(float(f'{Time}'.format(**Variables)))
         except: sleep(float(Time))  
     except: pass
-
+def IF(ConditionAndExecution):
+    try: if ConditionAndExecution
+    except:if ConditionAndExecution
