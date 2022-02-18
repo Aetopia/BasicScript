@@ -1,5 +1,6 @@
 # Nite Standard Library 
 
+from msilib.schema import Condition
 from time import sleep
 
 Variables = {}
@@ -21,13 +22,13 @@ def Pause(Time):
 
 def If(Arguments):
     from Core import Input
-    Statement, Command = Arguments.split('|')
+    Condition, Command = Arguments.split('|')
     try:
-        try: Statement = eval(f'{Statement.format(**Variables)}'.strip())
-        except: Statement = eval(f'{Statement}'.strip())  
+        try: Condition = eval(f'{Condition.format(**Variables)}'.strip())
+        except: Condition = eval(f'{Condition}'.strip())  
     except Exception as Error:
           print(f'[If] Error: {Error.__class__}') 
           exit()          
-    if Statement: Input(Command.strip())     
+    if Condition: Input(Command.strip())     
 
 
