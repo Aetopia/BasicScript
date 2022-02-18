@@ -56,8 +56,7 @@ Exiting!
 1. `var <Variable Name> = <Value>` => Creates a variable.
 2. `echo <String>` => Prints the specified string into the terminal.
 3. `pause <Float Value>` => Pauses a script for a specified time.
-4. `if Condition | Command` => If statement.         
-**Note: The If statement only uses eval() for logical operations.**
+4. `if Condition | Command` => If statement.
 
 To load in variable/s values into a command, enclose them in `{}`.        
      
