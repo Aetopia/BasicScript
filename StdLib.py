@@ -1,6 +1,5 @@
 # Nite Standard Library 
 
-from msilib.schema import Condition
 from time import sleep
 
 Variables = {}
