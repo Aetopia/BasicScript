@@ -1,5 +1,3 @@
-# Nite Standard Library 
-
 from time import sleep
 
 Variables = {}
