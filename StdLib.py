@@ -17,17 +17,6 @@ def Pause(Time):
         except: sleep(float(Time))  
     except Exception as Error: 
         print(f'[Pause] Error: {Error.__class__}')
-        exit()
-
-def If(Arguments):
-    from Core import Input
-    Condition, Command = Arguments.split('|')
-    try:
-        try: Condition = eval(f'{Condition.format(**Variables)}'.strip())
-        except: Condition = eval(f'{Condition}'.strip())  
-    except Exception as Error:
-          print(f'[If] Error: {Error.__class__}') 
-          exit()          
-    if Condition: Input(Command.strip())     
+        exit()  
 
 
